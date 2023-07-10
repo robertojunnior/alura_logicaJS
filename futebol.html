@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(68, 68, 68);
+            color: azure;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o número de vitórias"));
+    var empates = parseInt(prompt("Entre com o número de empates"));
+    var anoPassado = parseInt(prompt("Quantos pontos fizeram ano passado?"))
+
+    var pontos = (vitorias * 3) + empates;
+    mostrar("O seu time tem " + pontos + " pontos.");
+
+    if (pontos > anoPassado) {    
+        mostrar("Ele está melhor que ano passado.");
+    } else if (pontos < anoPassado) {
+        mostrar("Seu time está pior que ano passado");
+    } else {
+        mostrar("Seu time está igual que ano passado");
+    }
+    mostrar("Aperte F5 para reiniciar o programa.")
+
+    
+    
+    
+    
+
+    
+    </script>
+</body>
+</html>
