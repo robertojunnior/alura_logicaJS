@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da adivinhação</title>
+    <style>
+        body {
+            margin: 40px;
+            background-color: rgb(68, 68, 68);
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <script>
+         function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    alert('Jogo da adivinhação!')
+    let numero = Math.round(Math.random() * 10);
+
+    let palpite = Number(prompt('Escolha um número de 0 a 10?'))
+
+    if (palpite == numero) {
+        alert('Você acertou miserávi!')
+     } else {
+        alert(' Errou! Pressione F5 e tente novamente!')
+     }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
