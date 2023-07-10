@@ -14,33 +14,107 @@
         input {
             margin: 15px 0;
         }
+
+        table {
+            display: block;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 30px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4e4a4a;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Calculador de IMC</h1>
+    <h1>Calculadora de IMC</h1>
     <label for="peso">Coloque sua Altura:</label>
-    <input type="number" name="altura" id="entradaAltura">
+    <input type="number" name="altura" id="entradaAltura" placeholder="Ex: 1.70">
     <br>
     <label for="peso">Coloque seu Peso:</label>
-    <input type="number" name="peso" id="entradaPeso">
+    <input type="number" name="peso" id="entradaPeso" placeholder="Kg sem gramas">
     <br>
     <input type="button" value="Calcular" onclick="calcularImc()">
     <br>
     <div id="resposta">Valor do IMC:</div>
+    <div id="oms"></div>
+    <div id="lista">
+        <table>
+            <tr>
+                <th>IMC</th>
+                <th>CLASSIFICAÇÃO</th>
+                <th>OBESIDADE (GRAU)</th>
+            </tr>
+            <tr>
+                <td>MENOR QUE 18,5</td>
+                <td>MAGREZA</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>ENTRE 18,5 E 24,9</td>
+                <td>NORMAL</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>ENTRE 25,0 E 29,9</td>
+                <td>SOBREPESO</td>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>ENTRE 30,0 E 39,9</td>
+                <td>OBESIDADE</td>
+                <td>II</td>
+            </tr>
+            <tr>
+                <td>MAIOR QUE 40,0</td>
+                <td>OBESIDADE GRAVE</td>
+                <td>III</td>
+            </tr>
+        </table>
+    </div>
 
     <script>
-    
-    function calcularImc(){
-    let altura = document.getElementById('entradaAltura').value
-    let peso = document.getElementById('entradaPeso').value
-    let resposta = document.getElementById('resposta')
-
-    
-    let imc = peso / (altura * altura);
-
-    resposta.innerHTML = `O valor do IMC calculado é ${imc.toFixed(2)}`
+    function pulaLinha() {
+        document.write("<br><br>");
     }
+
+    function mostrar(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calcularImc(){
+        let altura = document.getElementById('entradaAltura').value
+        let peso = document.getElementById('entradaPeso').value
+        let resposta = document.getElementById('resposta')
+
+        let imc = peso / (altura * altura);
+
+        resposta.innerHTML = `O valor do IMC calculado é ${imc.toFixed(2)}`
+
+        if (imc < 18.5) {
+            oms.innerHTML = "Você está abaixo do recomendado pela OMS.";
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            oms.innerHTML = "Você está dentro do recomendado pela OMS.";
+        } else {
+            oms.innerHTML = "Você está acima do recomendado pela OMS."
+        }
+        
+        if (oms === true){
+            lista.innerHTML(lista)
+
+        }
+
+    }
+    
+
+    
 
     </script>
 </body>
