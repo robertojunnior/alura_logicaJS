@@ -1,3 +1,3 @@
 # alura_logicaJS
 
-Conteudo utilizado dentro do curso de Logica de programação com JavScript da Alura.
+Conteudo utilizado dentro do curso de Logica de programação da Alura, utilizando JavaScript.
