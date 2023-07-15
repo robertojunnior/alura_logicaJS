@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            background-color: #33383f;
+            color: azure;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+    
+        function mostrar(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        let totalFamiliares = parseInt(prompt("Quantas pessoas tem na sua família?"))
+
+        let contador = 1;
+        let totalIdades = 0; // começa vazia
+
+
+        while (contador <= totalFamiliares) {
+            // acumula o valor de idade informado
+            let idade = parseInt(prompt("Informe a idade do familiar:"));
+
+            // pega o novo valor adicionado a idade e soma ao totalItades
+            totalIdades = totalIdades + idade;
+
+            //conta mais um a cada familiar existente
+            contador++;
+
+        }
+        
+        let media = totalIdades / totalFamiliares;
+        mostrar(`A média de idade de seus familiares é : ${media}.`);
+        mostrar('Fim do programa.')
+        
+
+    </script>
+</body>
+</html>
