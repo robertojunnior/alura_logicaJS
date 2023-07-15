@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ano Copa</title>
+    <title>Quantas Copas do mundo tivemos?</title>
     <style>
         body {
             background-color: #33383f;
@@ -17,7 +17,7 @@
     <script>
         function pulaLinha() {
         document.write("<br><br>");
-    }
+    }2018
 
     function mostrar(frase) {
         document.write(frase);
@@ -25,13 +25,17 @@
     }
 
     let anoCopa = 1930;
+    let limite = Number(prompt("Qual da data limite de pesquisa?"));
+    let contador = 0;
 
 
-    while (anoCopa < 2023){
+    while (anoCopa < limite){
         mostrar("Tivemos copa nos anos de " + anoCopa + ".");
-        anoCopa += 4
+        anoCopa += 4 
+        contador +=1
     }
-    mostrar('FIM')
+    mostrar('FIM da pesquisa.')
+    mostrar(`Tivemos um total de ${contador} Copas do Mundo de Futebol até o ano de ${limite}.`)
 
 
 
