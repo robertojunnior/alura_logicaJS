@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            background-color: #33383f;
+            color: azure;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+    
+        function mostrar(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        let tabuada = Number(prompt("Qual tabuada deseja calcular?: ")) 
+        mostrar(` A tabuada do número ${tabuada} é:`)
+
+        for (let multiplicador = 0; multiplicador <= 10; multiplicador++) {
+
+            let resultado = tabuada * multiplicador
+            mostrar(`${tabuada} x ${multiplicador} = ${resultado}`)
+        }
+
+    </script>
+</body>
+</html>
