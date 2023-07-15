@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantas Copas do mundo tivemos?</title>
+    <title>Aluno exagerado</title>
     <style>
         body {
             background-color: #33383f;
@@ -24,23 +24,25 @@
         pulaLinha();
     }
 
-    let anoCopa = 1930;
-    let limite = Number(prompt("Qual da data limite de pesquisa?"));
-    let contador = 0;
+    function sorteia() {
 
+    return Math.round(Math.random() * 100);
+    }   
 
-    while (anoCopa <= limite){
-        mostrar("Tivemos copa nos anos de " + anoCopa + ".");
-        anoCopa += 4 
-        contador +=1
+    let numeroPensado = sorteia();
+
+    let chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+        mostrar("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    
+    } else {
+        let contador = 1;
+        while (contador <= 10){
+        mostrar("Você errou!"); 
+        contador = contador + 1;
     }
-    mostrar('FIM da pesquisa.')
-    mostrar(`Tivemos um total de ${contador} Copas do Mundo de Futebol até o ano de ${limite}.`)
-
-
-
-
-
+    }
 
     </script>
 </body>

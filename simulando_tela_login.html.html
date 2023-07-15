@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulando uma tela de login.</title>
+    <style>
+        body {
+            background-color: #33383f;
+            color: azure;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+    
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        let login = "alura";
+        let senha = "alura321";
+
+        let limiteTentativa = 3;
+        let tentativa = 1;
+
+        // enauqnto tentativa for menor que o limite, peça os imputs
+        while(tentativa <= limiteTentativa) {
+
+        let loginInformado = prompt("Informe seu login");
+        let senhaInformada = prompt("Informe sua senha");
+
+            // E se o login informado no input for diferente e a senha também execute o código abaixo
+            if( login == loginInformado && senha == senhaInformada ) {
+
+                alert("Bem-vindo ao sistema, " + loginInformado);
+                // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá embaixo vai incrementar + 1! 
+
+                //agora para mensagem  limite, damos a tentativa o valor do limite para que ela mostre o alerta
+                tentativa = limiteTentativa; 
+                
+            } else {
+                //se tentativa for = 3 alert e encerra
+                if (tentativa == 3) {
+                    alert("Número permitido de tentativas ultrapassado!");
+                    // se não dá a mensagem de inválido e vai para o loop até chegar a 3
+                } else {
+                    alert("Login inválido. Tente novamente");
+                }
+            }
+
+            // vai para a próxima tentativa
+            tentativa ++ 
+            // tentativa = tentativa + 1  até ser igual a 3
+        }        
+        
+    </script>
+</body>
+</html>
