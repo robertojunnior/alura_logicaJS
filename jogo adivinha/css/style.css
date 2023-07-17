@@ -5,6 +5,7 @@
 }
 
 body {
+    margin-top: 30px;
     background-color: rgb(0, 0, 0);
     color: azure;
     box-sizing: border-box;
@@ -15,14 +16,14 @@ h1 {
 }
 
 h3 {
-    margin: 10px 0;
+    margin: 15px 0 0;
 }
 
 .container__sorteio {
     margin: auto;
     background-color: rgb(62, 62, 128);
     width: 200px;
-    height: 500px;
+    height: 400px;
     border-radius: 20px;
     padding: 30px;
 
@@ -32,7 +33,7 @@ h3 {
     align-items: center;
     text-align: center;
 
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #entrada_numero {
@@ -48,27 +49,20 @@ h3 {
     width: 80px;
     height: 50px;
     border-radius: 20px;
-    font-size: .9em;
+    font-size: 1em;
 
-}
-
-.placar__pontos {
-    background-color: white;
-    height: 50px;
-    width: 150px;
-    text-align: center;
-    border-radius: 20px;
-    font-size: 2em;
-    margin: 10px 0;
 }
 
 .resposta {
     background-color: rgb(255, 255, 255);
-    height: 50px;
-    width: 150px;
-    text-align: center;
+    height: 100px;
+    width: 200px;
     border-radius: 20px;
     font-size: 1em;
     color: black;
-    margin: 20px 0;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

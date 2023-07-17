@@ -14,7 +14,7 @@ while (tentativa <= 3) {
     let resposta = document.querySelector('.resposta')
 
 
-    if (palpite == numero) {
+    if (palpite.value == numero) {
         
         resposta.innerHTML = 'Você acertou miserávi!'
 
