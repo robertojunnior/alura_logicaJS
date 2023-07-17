@@ -24,7 +24,7 @@
     }
 
 
-    alert('Jogo da adivinhação!')
+    alert('Descubra o número secreto! Você tem 03 chances, a cada tentativa um novo número será sorteado!')
 
     let tentativa = 1;
 
@@ -38,11 +38,12 @@
         alert('Você acertou miserávi!')
 
         } else if (tentativa <=3 ){
-        alert(' Errou! Tente novamente!')
+        alert('Errou, tente novamente! O número secreto era ' + numero + '.')
 
         } else if (tentativa > 3) {
-            alert ('Errou! Fim de Jogo!')
+            alert ('Errou, fim de Jogo! O número secreto era ' + numero + '.')
         }
+        
     }
 
     </script>
