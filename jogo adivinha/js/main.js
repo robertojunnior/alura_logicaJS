@@ -1,11 +1,7 @@
-function mostrar(frase) {
-    document.write(frase);
-}
-
 function jogar() {
 
 let tentativa = 1;
-let palpite = document.querySelectorAll('.entrada_numero').value
+let palpite = document.querySelectorAll('.entrada_numero')
 
 while (tentativa <= 3) {
     let numero = Math.round(Math.random() * 10);
