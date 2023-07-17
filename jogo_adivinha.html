@@ -22,16 +22,28 @@
         document.write(frase);
         pulaLinha();
     }
+
+
     alert('Jogo da adivinhação!')
-    let numero = Math.round(Math.random() * 10);
 
-    let palpite = Number(prompt('Escolha um número de 0 a 10?'))
+    let tentativa = 1;
 
-    if (palpite == numero) {
+    while (tentativa <=3) {
+        let numero = Math.round(Math.random() * 10);
+        tentativa ++
+
+        let palpite = Number(prompt('Escolha um número de 0 a 10?'))
+
+        if (palpite == numero) {
         alert('Você acertou miserávi!')
-     } else {
-        alert(' Errou! Pressione F5 e tente novamente!')
-     }
+
+        } else if (tentativa <=3 ){
+        alert(' Errou! Tente novamente!')
+
+        } else if (tentativa > 3) {
+            alert ('Errou! Fim de Jogo!')
+        }
+    }
 
     </script>
 </body>
