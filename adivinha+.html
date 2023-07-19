@@ -22,23 +22,26 @@
 
 
 
-    let numeroSecreto = Math.round(Math.random() * 10)
+    let segredo = Math.round(Math.random() * 10);
     let input = document.querySelector("input")
-    input.focus()
-    input.style.height = '50px'
-    input.style.width = '50px'
-    input.style.borderRadius = '20px'
-    input.style.fontSize = '1.5em'
+    input.focus();
 
     let resposta = document.querySelector('.resposta')
+
+    // input.style.height = '50px'
+    // input.style.width = '50px'
+    // input.style.borderRadius = '20px'
+    // input.style.fontSize = '1.5em'
+
+    
     
 
     function verifica(){
 
-        if (input.value == numeroSecreto) {
+        if (input.value == segredo) {
             resposta.innerHTML= '</br> Você acertou.'
         } else {
-            resposta.innerHTML = '</br> Você errou! O número secreto era ' + numeroSecreto + "."
+            resposta.innerHTML = '</br> Você errou! O número secreto era ' + segredo + "."
         }
         input.value = '';
         input.focus();

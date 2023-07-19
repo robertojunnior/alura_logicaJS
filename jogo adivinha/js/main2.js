@@ -1,6 +1,7 @@
 let botao = document.querySelector(".botao__jogar");
 botao.onclick = jogar;
 
+
 function jogar() {
   let tentativa = 1;
 
@@ -21,5 +22,8 @@ function jogar() {
     } 
     tentativa++;
     palpite.focus()
+    
   }
+
 }
+
