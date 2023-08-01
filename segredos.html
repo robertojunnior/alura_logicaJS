@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número secreto</title>
+
+    <style>
+        body {
+            background-color: #33383f;
+            color: azure;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="Aperte aqui" id="botao">
+    <button>Compare com o número secreto</button>
+    <div class="resposta"></div>
+
+    <script>
+
+
+
+    let segredos = [5,7,10,2];
+
+    let input = document.querySelector("input")
+    input.focus();
+
+    let resposta = document.querySelector('.resposta')
+    
+
+    function verifica(){
+
+        if (input.value == segredo) {
+            resposta.innerHTML= '</br> Você acertou.'
+        } else {
+            resposta.innerHTML = '</br> Você errou! O número secreto era ' + segredo + "."
+        }
+        input.value = '';
+        input.focus();
+    }
+    let button = document.querySelector("button")
+    button.onclick = verifica;
+
+    
+    </script>
+    
+</body>
+</html>
