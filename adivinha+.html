@@ -21,7 +21,42 @@
     <div class="resposta"></div>
 
     <script>
-        let segredos = [1, 4, 6, 10, 5];
+        function sorteia() {
+            Math.round(Math.random() * 10);
+        }
+
+        function sorteiaNumeros(quantidade) {
+            let segredos = [];
+            let numero = 1;
+            while (numero <= quantidade) {
+
+                var numeroAleatorio = sorteia();
+
+                if (numeroAleatorio !== 0) {
+
+                    var achou = false;
+
+                    for (var posicao = 0; posicao < segredos.length; posicao++) {
+
+                        if (segredos[posicao] == numeroAleatorio) {
+                            achou = true;
+                            break;
+                        }
+                    }
+
+                    if (achou == false) {
+                        segredos.push(numeroAleatorio);
+                        numero++;
+                    }
+                }
+            }
+
+            return segredos;
+        }
+
+        let segredos = sorteiaNumeros(5);
+        console.log(segredos);
+
 
         let input = document.querySelector("input")
         input.focus();
